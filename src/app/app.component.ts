@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'handling-ie';
+
+  constructor() {
+    if (window.nomodule) {
+      console.log("woo");
+    }
+  }
 }

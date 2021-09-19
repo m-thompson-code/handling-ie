@@ -1,0 +1,20 @@
+{
+  "hosting": {
+    "public": "dist/handling-ie",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "browser-lacks-support",
+        "destination": "/assets/no-support/index.html"
+      },
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}
