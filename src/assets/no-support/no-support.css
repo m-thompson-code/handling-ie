@@ -49,6 +49,7 @@ img {
     display: block;
     height: 96px;
     width: 96px;
+    min-width: 96px;/* IE requires min-width for flex width to work properly with flex */
     margin-right: 48px;
 }
 
@@ -72,6 +73,7 @@ h1, h3, p, .container {
     img {
         height: 64px;
         width: 64px;
+        min-width: 64px;/* IE requires min-width for flex width to work properly with flex */
         margin-right: 32px;
     }
     h1, h3, p, .container {
@@ -89,6 +91,7 @@ h1, h3, p, .container {
     img {
         height: 48px;
         width: 48px;
+        min-width: 48px;/* IE requires min-width for flex width to work properly with flex */
         margin-right: 24px;
     }
     h1, h3, p, .container {
@@ -111,6 +114,7 @@ h1, h3, p, .container {
     img {
         height: 44px;
         width: 44px;
+        min-width: 44px;/* IE requires min-width for flex width to work properly with flex */
         margin-right: 18px;
     }
     h1, h3, p, .container {
