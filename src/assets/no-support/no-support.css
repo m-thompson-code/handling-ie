@@ -12,7 +12,7 @@ h1, h3, p {
     padding: 0;
 }
 
-.background {
+.background-overlay {
     background-image: linear-gradient(#fafafa, white);
     position: fixed;
     top: 0;
@@ -20,12 +20,13 @@ h1, h3, p {
     height: 200vh;
     width: 100vw;
     border-radius: 55% 0;
+    opacity: 0.6;
     z-index: -1;
 }
 
-.background-overlay {
+.background-dots {
     background-image: url("./dots.png");
-    opacity: .025;
+    opacity: .04;
     background-size: cover;
 
     position: fixed;
@@ -51,19 +52,16 @@ img {
     width: 96px;
     min-width: 96px;/* IE requires min-width for flex width to work properly with flex */
     margin-right: 48px;
+    object-fit: contain;
 }
 
-h1, h3, p, .container {
+h1, h3, p, .container, .suggestion  {
     margin-bottom: 32px;
 }
 
 .header, .suggestion {
     display: flex;
     align-items: center;
-}
-
-.suggestion {
-    margin-bottom: 64px;
 }
 
 @media only screen and (min-width: 993px) and (max-width: 1400px) {
@@ -76,11 +74,8 @@ h1, h3, p, .container {
         min-width: 64px;/* IE requires min-width for flex width to work properly with flex */
         margin-right: 32px;
     }
-    h1, h3, p, .container {
+    h1, h3, p, .container, .suggestion {
         margin-bottom: 24px;
-    }
-    .suggestion {
-        margin-bottom: 48px;
     }
 }
 
@@ -94,13 +89,11 @@ h1, h3, p, .container {
         min-width: 48px;/* IE requires min-width for flex width to work properly with flex */
         margin-right: 24px;
     }
-    h1, h3, p, .container {
+    h1, h3, p, .container, .suggestion {
         margin-bottom: 18px;
     }
     .suggestion {
         align-items: flex-start;
-        
-        margin-bottom: 24px;
     }
     .suggestion img {
         margin-top: 12px;
@@ -117,12 +110,11 @@ h1, h3, p, .container {
         min-width: 44px;/* IE requires min-width for flex width to work properly with flex */
         margin-right: 18px;
     }
-    h1, h3, p, .container {
+    h1, h3, p, .container, .suggestion {
         margin-bottom: 18px;
     }
     .suggestion {
         align-items: flex-start;
-        margin-bottom: 18px;
     }
     .suggestion img {
         margin-top: 9px;
