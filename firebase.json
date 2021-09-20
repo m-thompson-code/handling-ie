@@ -8,7 +8,7 @@
     ],
     "rewrites": [
       {
-        "source": "browser-lacks-support",
+        "source": "browser-is-not-supported",
         "destination": "/assets/no-support/index.html"
       },
       {

@@ -1,0 +1,127 @@
+html, body { height: 100%; }
+body {
+    margin: 0; 
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    font-size: 16px;
+    line-height: 28px;
+    color: rgba(0,0,0, 0.87);
+    background-color: #fafafa;
+}
+h1, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+.background {
+    background-image: linear-gradient(#fafafa, white);
+    position: fixed;
+    top: 0;
+    left: 10vw;
+    height: 200vh;
+    width: 100vw;
+    border-radius: 55% 0;
+    z-index: -1;
+}
+
+.background-overlay {
+    background-image: url("./dots.png");
+    opacity: .025;
+    background-size: cover;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+
+.container {
+    width: 60%;
+    margin: 96px auto 0;
+    margin: 7.5vh auto 0;
+    padding-bottom: 96px;
+    padding-bottom: 7.5vh;
+}
+
+img {
+    display: block;
+    height: 96px;
+    width: 96px;
+    margin-right: 48px;
+}
+
+h1, h3, p, .container {
+    margin-bottom: 32px;
+}
+
+.header, .suggestion {
+    display: flex;
+    align-items: center;
+}
+
+.suggestion {
+    margin-bottom: 64px;
+}
+
+@media only screen and (min-width: 993px) and (max-width: 1400px) {
+    .container {
+        width: 65%;
+    }
+    img {
+        height: 64px;
+        width: 64px;
+        margin-right: 32px;
+    }
+    h1, h3, p, .container {
+        margin-bottom: 24px;
+    }
+    .suggestion {
+        margin-bottom: 48px;
+    }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 992px) {
+    .container {
+        width: 75%;
+    }
+    img {
+        height: 48px;
+        width: 48px;
+        margin-right: 24px;
+    }
+    h1, h3, p, .container {
+        margin-bottom: 18px;
+    }
+    .suggestion {
+        align-items: flex-start;
+        
+        margin-bottom: 24px;
+    }
+    .suggestion img {
+        margin-top: 12px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+        width: 90%;
+    }
+    img {
+        height: 44px;
+        width: 44px;
+        margin-right: 18px;
+    }
+    h1, h3, p, .container {
+        margin-bottom: 18px;
+    }
+    .suggestion {
+        align-items: flex-start;
+        margin-bottom: 18px;
+    }
+    .suggestion img {
+        margin-top: 9px;
+    }
+}
+
