@@ -41,8 +41,12 @@ export class AppComponent {
   private readonly unsubscriber$ = new Subject<void>();
 
   initForms = true;
+
+  browserWarning = false;
   
   constructor(private fb: FormBuilder) {
+    this.browserWarning = window.nomodule ?? false;
+
     const app = initializeApp(firebaseConfig);
     this.db = getFirestore(app);
     this.auth = getAuth(app);

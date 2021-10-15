@@ -1,3 +1,4 @@
+<div class="warning" *ngIf="browserWarning">Your browser is bad and you should feel bad. Use Chrome</div>
 <div *ngIf="uid" class="container">
   <div class="chart">
     <div [class]="'bar pos-' + chartData.rank" *ngFor="let chartData of chartDatas; trackBy: chartDataTrackBy">
