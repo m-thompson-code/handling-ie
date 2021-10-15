@@ -131,8 +131,6 @@ export class AppComponent {
           this.form.controls.rankings.setValue([votes[0],votes[1],votes[2],votes[3],votes[4],votes[5]]);
         }
 
-        
-        console.log(votes);
         for (let i = 0; i < 6; i++) {
           this.chartDatas[i].value += votes[i] ?? 0;
         }
@@ -141,7 +139,6 @@ export class AppComponent {
       this.initForms = false;
 
       const temp = [...this.chartDatas].sort((a: ChartData, b: ChartData) => a.value - b.value);
-      console.log(this.chartDatas);
 
       this.chartDatas.forEach(chartData => {
         chartData.rank = temp.indexOf(chartData);
@@ -152,7 +149,6 @@ export class AppComponent {
   signIn(): void {
     signInAnonymously(this.auth)
     .then((user) => {
-      console.log("signed in", user);
       this.uid = user.user.uid;
 
       this.getData();
