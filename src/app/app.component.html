@@ -1,19 +1,21 @@
-<div>
-  Hello world :D
-</div>
-
-<div>
-  Numbers: {{ numbers | json }}
-</div>
-
-<div>
-  Sum: {{ sum }}
-</div>
-
-<div>
-  Includes Even Numbers: {{ isEven }}
-</div>
-
-<div>
-  Double the numbers: {{ doubleNumbers | json }}
+<div class="container">
+  <div class="chart">
+    <div [class]="'bar pos-' + chartData.rank" *ngFor="let chartData of chartDatas; trackBy: chartDataTrackBy; let i = index">
+      <div class="value">
+        {{ chartData.value }}
+      </div>
+      <img [src]="'/assets/icons/' + (i + 1) + '.png'">
+    </div>
+  </div>
+  
+  <form [formGroup]="form">
+    <div class="images" formArrayName="rankings">
+      <div class="image-wrapper" *ngFor="let imageIndex of imageIndexes; let i = index">
+        <img [src]="'/assets/icons/' + imageIndex + '.png'">
+        <mat-radio-group [formControlName]="i">
+          <mat-radio-button *ngFor="let rank of imageIndexes" [value]="rank">{{ rank }}</mat-radio-button> 
+        </mat-radio-group>
+      </div>
+    </div>
+  </form>
 </div>

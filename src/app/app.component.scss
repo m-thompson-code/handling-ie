@@ -1,0 +1,102 @@
+@use "sass:math";
+
+$pulse-width: 40px;
+$image-margin: $pulse-width;
+
+@mixin get-pos($value) {
+    .bar.pos-#{$value} {
+        left: calc(-#{$pulse-width} + #{($value + 1) / 6} * 100%);
+    }
+}
+
+:host {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    margin: 96px auto 0;
+    margin: 7.5vh auto 0;
+}
+
+.chart {
+    position: relative;
+    margin-top: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 66px;
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: $image-margin;
+
+    .bar {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: left 1s;
+
+        img {
+            width: $pulse-width;
+            height: auto;
+        }
+    }
+
+    @include get-pos(0);
+    @include get-pos(1);
+    @include get-pos(2);
+    @include get-pos(3);
+    @include get-pos(4);
+    @include get-pos(5);
+}
+
+.images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: -$image-margin;
+    margin-bottom: 20vh;
+}
+
+.image-wrapper {
+    padding: $image-margin;
+
+    img {
+        width: 300px;
+        height: auto;
+        margin-bottom: $pulse-width;
+    }
+}
+
+
+@media only screen and (min-width: 993px) and (max-width: 1400px) {
+    .container {
+        width: 85%;
+    }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 992px) {
+    .container {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+        width: 100%;
+    }
+}
+
