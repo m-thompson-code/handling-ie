@@ -1,10 +1,10 @@
-<div class="container">
+<div *ngIf="uid" class="container">
   <div class="chart">
-    <div [class]="'bar pos-' + chartData.rank" *ngFor="let chartData of chartDatas; trackBy: chartDataTrackBy; let i = index">
+    <div [class]="'bar pos-' + chartData.rank" *ngFor="let chartData of chartDatas; trackBy: chartDataTrackBy">
       <div class="value">
         {{ chartData.value }}
       </div>
-      <img [src]="'/assets/icons/' + (i + 1) + '.png'">
+      <img [src]="'/assets/icons/' + (chartData.imgIndex + 1) + '.png'">
     </div>
   </div>
   
