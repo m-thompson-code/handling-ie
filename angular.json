@@ -1,5 +1,8 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": "bc6d8c1f-5e1c-4f21-ab41-32f116785e7d"
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
@@ -65,6 +68,16 @@
               "extractLicenses": false,
               "sourceMap": true,
               "namedChunks": true
+            },
+            "development-es5": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true,
+              "tsConfig": "tsconfig.es5.json",
+              "polyfills": "src/polyfills.es5.ts"
             }
           },
           "defaultConfiguration": "production"
@@ -77,6 +90,9 @@
             },
             "development": {
               "browserTarget": "handling-ie:build:development"
+            },
+            "development-es5": {
+              "browserTarget": "handling-ie:build:development-es5"
             }
           },
           "defaultConfiguration": "development"

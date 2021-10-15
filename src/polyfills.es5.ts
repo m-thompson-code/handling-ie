@@ -13,10 +13,17 @@
  *
  * Learn more in https://angular.io/guide/browser-support
  */
-
+console.log("moo");
 /***************************************************************************************************
  * BROWSER POLYFILLS
  */
+// importing all of core-js will polyfill for everything, but you'll increase your bundle size
+import 'core-js';  // Polyfills for IE 11
+// importing only the packages core-js you need will result in a smaller bundle size,
+// but it may be hard to determine if you've imported everything you need
+// import 'core-js/es/promise';  // Polyfills for IE 11
+// import 'core-js/es/symbol';  // Polyfills for IE 11
+// import 'core-js/es/object';  // Polyfills for IE 11
 
 /**
  * IE11 requires the following for NgClass support on SVG elements
@@ -53,7 +60,7 @@
  *  (window as any).__Zone_enable_cross_context_check = true;
  *
  */
-(window as any).__Zone_enable_cross_context_check = true;
+// (window as any).__Zone_enable_cross_context_check = true;
 
 /***************************************************************************************************
  * Zone JS is required by default for Angular itself.

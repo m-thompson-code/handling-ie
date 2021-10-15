@@ -1,0 +1,12 @@
+/* To learn more about this file see: https://angular.io/config/tsconfig. */
+{
+  "extends": "./tsconfig.app.json",
+  "compilerOptions": {
+    // source: https://angular.io/guide/deployment#differential-loading
+    "target": "es5",// Required to use es5 to support IE 11 locally
+  },
+  "files": [
+    "src/main.ts",
+    "src/polyfills.es5.ts"// Custom polyfills for es5 local development
+  ],
+}

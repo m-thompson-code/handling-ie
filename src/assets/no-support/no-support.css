@@ -25,7 +25,7 @@ h1, h3, p {
 }
 
 .background-dots {
-    background-image: url("./dots.png");
+    background-image: url("./imgs/dots.png");
     opacity: .04;
     background-size: cover;
 
