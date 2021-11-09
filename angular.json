@@ -1,7 +1,12 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "cli": {
-    "analytics": "bc6d8c1f-5e1c-4f21-ab41-32f116785e7d"
+    "analytics": "bc6d8c1f-5e1c-4f21-ab41-32f116785e7d",
+    "cache": {
+        "enabled": true,
+        "path": ".cache",
+        "environment": "all"
+    }
   },
   "version": 1,
   "newProjectRoot": "projects",
